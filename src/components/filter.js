@@ -7,14 +7,14 @@ class Filter extends React.Component {
       <div className="filters-container">
         <div className="filters">
           {this.props.filters.map((filter, index) => (
-            <div key={index}>
-              <h2>{filter}</h2>
-              <button
-                className=""
+            <div key={index} className="filter-tag">
+              <span className="filter-name">{filter}</span>
+              <span
+                className="filter-button"
                 onClick={() => this.props.removeFilter(filter)}
               >
-                X
-              </button>
+                🞭
+              </span>
             </div>
           ))}
         </div>

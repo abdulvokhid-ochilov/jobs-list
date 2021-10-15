@@ -15,12 +15,18 @@ class Jobs extends React.Component {
     return (
       <div className="jobs-container">
         {filtered_jobs.map((job) => (
-          <div className="job" key={job.id}>
+          <div className={job.featured ? "job featured" : "job"} key={job.id}>
             <div className="job-logo">
               <img src={job.logo} alt={job.company} />
             </div>
             <div className="job-details">
-              <h2>{job.company}</h2>
+              <h2>
+                {job.company}
+                {job.new ? <span className="new-span">NEW!</span> : null}
+                {job.featured ? (
+                  <span className="featured-span">FEATURED</span>
+                ) : null}
+              </h2>
               <h1>{job.position}</h1>
               <p>
                 <span>{job.postedAt}</span>

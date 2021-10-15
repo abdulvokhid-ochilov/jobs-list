@@ -8,7 +8,7 @@ function App() {
   const [filters, setFilter] = useState([]);
 
   const addFilter = (filter) => {
-    setFilter([...filters, filter]);
+    if (!filters.includes(filter)) setFilter([...filters, filter]);
   };
 
   const clearFilter = () => {

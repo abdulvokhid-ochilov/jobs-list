@@ -3,9 +3,7 @@
 :root {
   --primary-color: #5ca5a5;
   --background-color-body: hsl(180, 52%, 96%);
-  --filter-tablets: hsl(180, 31%, 95%);
   --secondary-dark: #7c8f8f;
-  --vdark-gray-cyan: hsl(180, 14%, 20%);
 }
 
 * {
@@ -22,7 +20,7 @@ body {
 
 h1 {
   font-size: 18px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 h1:hover {
@@ -33,19 +31,8 @@ h1:hover {
 h2 {
   font-size: 14px;
   color: var(--primary-color);
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
-
-/* span:after {
-  content: " ";
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  color: var(--secondary-dark);
-}
-span:last-child:after {
-  content: "";
-} */
 
 .header {
   height: 156px;
@@ -68,28 +55,44 @@ span:last-child:after {
   border-radius: 5px;
   box-shadow: 0 15px 20px 0 rgba(13, 113, 130, 0.15);
 }
+
+.featured {
+  border-left: 6px solid var(--primary-color);
+}
 /* JOB DETAILS CSS */
 .job-details {
   margin-left: 24px;
 }
 
-/* .job-details > p {
-  display: flex;
-  justify-content: space-between;
-} */
+.new-span,
+.featured-span {
+  font-size: 11px;
+  color: #fff;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.new-span {
+  background-color: var(--primary-color);
+  margin-left: 40px;
+}
+
+.featured-span {
+  background-color: #000;
+  margin-left: 16px;
+}
 
 p > span {
   color: var(--secondary-dark);
   margin-bottom: 8px;
 }
 
-span:after {
+p > span:after {
   content: "•";
-  /* align-self: center; */
   margin: 0 20px 0 20px;
   color: var(--secondary-dark);
 }
-span:last-child:after {
+P > span:last-child:after {
   content: "";
 }
 
@@ -99,7 +102,9 @@ span:last-child:after {
 }
 
 .job-tags > button {
+  font-family: Spartan;
   font-size: 13px;
+  font-weight: bold;
   border: 0;
   padding: 8px;
   margin-left: 16px;
@@ -131,6 +136,7 @@ span:last-child:after {
 .clear {
   border: 0;
   font-size: 13px;
+  font-weight: bold;
   background-color: #fff;
   color: var(--primary-color);
 }
@@ -138,4 +144,37 @@ span:last-child:after {
 .clear:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.filter-tag,
+.filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.filter-tag {
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 16px;
+  border-radius: 5px;
+  color: var(--primary-color);
+  background-color: var(--background-color-body);
+}
+
+.filter-name {
+  padding: 8px;
+}
+
+.filter-button {
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  padding: 0 8px 0 8px;
+  font-size: 20px;
+  background-color: var(--primary-color);
+}
+
+.filter-button:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
 }
