@@ -2,7 +2,8 @@ import React from "react";
 
 class Filter extends React.Component {
   render() {
-    return (
+    const len = this.props.filters.length;
+    return len > 0 ? (
       <div className="filters-container">
         <div className="filters">
           {this.props.filters.map((filter, index) => (
@@ -17,11 +18,11 @@ class Filter extends React.Component {
             </div>
           ))}
         </div>
-        <button className="" onClick={this.props.clearFilter}>
+        <button className="clear" onClick={this.props.clearFilter}>
           Clear
         </button>
       </div>
-    );
+    ) : null;
   }
 }
 
