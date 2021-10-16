@@ -36,18 +36,18 @@ h2 {
 
 .header {
   height: 156px;
-  width: 100%;
   background-color: var(--primary-color);
   background-image: url("./images/bg-header-desktop.svg");
 }
 
 .jobs-container {
-  width: 1110px;
+  max-width: 1110px;
   margin: 76px auto;
+  padding: 0 16px;
 }
 
 .job {
-  padding: 32px 42px;
+  padding: 32px 40px;
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -89,7 +89,7 @@ p > span {
 
 p > span:after {
   content: "•";
-  margin: 0 20px 0 20px;
+  margin: 0 20px;
   color: var(--secondary-dark);
 }
 P > span:last-child:after {
@@ -99,6 +99,8 @@ P > span:last-child:after {
 /* JOB TAGS CSS */
 .job-tags {
   margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .job-tags > button {
@@ -107,7 +109,7 @@ P > span:last-child:after {
   font-weight: bold;
   border: 0;
   padding: 8px;
-  margin-left: 16px;
+  margin: 0 0 16px 16px;
   border-radius: 5px;
   color: var(--primary-color);
   background-color: var(--background-color-body);
@@ -121,16 +123,19 @@ P > span:last-child:after {
 
 /* FILTERS */
 .filters-container {
-  width: 1110px;
-  height: 72px;
   margin: -36px auto 0 auto;
+  padding: 0 16px;
+  max-width: 1110px;
+}
+
+.filters-wrapper {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 15px 20px 0 rgba(13, 113, 130, 0.15);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 42px 0 42px;
+  padding: 20px 40px;
 }
 
 .clear {
@@ -150,7 +155,6 @@ P > span:last-child:after {
 .filters {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
 .filter-tag {
@@ -177,4 +181,69 @@ P > span:last-child:after {
 .filter-button:hover {
   cursor: pointer;
   background-color: rgb(0, 0, 0);
+}
+
+hr {
+  display: none;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 768px) {
+  .header {
+    background-image: url("./images/bg-header-mobile.svg");
+  }
+
+  .job {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 24px 24px;
+    margin-bottom: 40px;
+  }
+  .job-logo {
+    margin-top: -55px;
+    position: absolute;
+  }
+  .job-logo > img {
+    width: 44px;
+    width: 44px;
+  }
+
+  .job-details {
+    margin: 0;
+    padding: 8px 0 23px 0;
+  }
+
+  p > span:after {
+    margin: 0 16px;
+  }
+
+  .job-tags {
+    margin: 0;
+  }
+
+  .job-tags > button {
+    margin: 16px 16px 0 0;
+  }
+
+  hr {
+    width: 100%;
+    display: block;
+    height: 1px;
+    border: none;
+    background-color: var(--secondary-dark);
+  }
+
+  .filters-wrapper {
+    padding: 24px 24px 8px;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .filter-tag {
+    margin: 0 16px 16px 0;
+  }
 }

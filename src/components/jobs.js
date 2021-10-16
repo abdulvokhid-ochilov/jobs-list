@@ -34,6 +34,7 @@ class Jobs extends React.Component {
                 <span>{job.location}</span>
               </p>
             </div>
+            <hr />
             <div className="job-tags">
               {[...job.languages, ...job.tools, job.role, job.level].map(
                 (tag, index) => {
