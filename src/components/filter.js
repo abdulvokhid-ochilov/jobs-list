@@ -14,7 +14,7 @@ class Filter extends React.Component {
                   className="filter-button"
                   onClick={() => this.props.removeFilter(filter)}
                 >
-                  🞭
+                  X
                 </span>
               </div>
             ))}

@@ -155,6 +155,7 @@ P > span:last-child:after {
 .filters {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .filter-tag {
@@ -167,14 +168,13 @@ P > span:last-child:after {
 }
 
 .filter-name {
-  padding: 8px;
+  padding: 10px;
 }
 
 .filter-button {
   border-radius: 0 5px 5px 0;
   color: #fff;
-  padding: 0 8px 0 8px;
-  font-size: 20px;
+  padding: 9px;
   background-color: var(--primary-color);
 }
 
